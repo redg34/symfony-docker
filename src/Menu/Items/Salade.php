@@ -1,10 +1,22 @@
 <?php
 namespace App\Menu\Items;
+use App\Menu\Items\MenuItem;
 
 class Pizza implements MenuItem {
-    private $price = 15.50;
+    private $price;
 
-    public function getPrice(): float {
+    public function __construct()
+    {
+        $this->price = 6.0;
+    }
+
+    public function addItem(MenuItem $piece): void
+    {
+    }
+
+    public function getPrice(): float
+    {
         return $this->price;
     }
 }
+

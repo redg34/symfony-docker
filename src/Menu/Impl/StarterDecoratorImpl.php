@@ -1,7 +1,7 @@
 <?php
 namespace App\Menu\Impl;
 
-use App\Menu\Items\MenuItem; // Assurez-vous d'utiliser le bon chemin ici
+use App\Menu\Items\MenuItem; 
 
 final class StarterDecoratorImpl implements MenuItem {
     private $decorator;

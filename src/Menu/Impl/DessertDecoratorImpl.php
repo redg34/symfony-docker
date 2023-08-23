@@ -12,15 +12,13 @@ final class DessertDecoratorImpl implements MenuItem {
         $this->decorator = $decorator;
     }
 
-    public function addItem(MenuItem $piece) {
-        $this->pieces[] = $piece;
+    public function addItem(MenuItem $piece): void
+    {
+        $this->pieces = $piece;
     }
 
-    public function getPrice(): float {
-        $totalPrice = $this->decorator->getPrice();
-        foreach ($this->pieces as $piece) {
-            $totalPrice += $piece->getPrice();
-        }
-        return $totalPrice;
+    public function getPrice(): float
+    {
+        return $this->decorator->getPrice() + $this->pieces->getPrice();
     }
 }
