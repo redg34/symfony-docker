@@ -1,15 +1,24 @@
 <?php
 namespace App\Tests\Service;
 
+use App\Menu\Impl\MainCourseImpl;
+use App\Menu\Items\MenuItem;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use App\Service\MenuService;
 
+
+
 class MenuServiceTest extends KernelTestCase {
     private $menuService;
+    
 
     protected function setUp(): void {
         self::bootKernel();
-        $this->menuService = self::$container->get(MenuService::class);
+         // Get service container
+         $container = static::getContainer();
+        
+        // Get the service from the container
+        $this->menuService = $container->get(MenuService::class);
     }
 
     public function testMainCourseOnly(): void {
