@@ -2,7 +2,7 @@
 namespace App\Menu\Items;
 use App\Menu\Items\MenuItem;
 
-class Pizza implements MenuItem {
+class Salade implements MenuItem {
     private $price;
 
     public function __construct()

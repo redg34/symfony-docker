@@ -11,7 +11,7 @@ final class StarterDecoratorImpl implements MenuItem {
         $this->decorator = $decorator;
     }
 
-    public function addItem(MenuItem $piece) {
+    public function addItem(MenuItem $piece): void {
         $this->piece = $piece;  
     }
 

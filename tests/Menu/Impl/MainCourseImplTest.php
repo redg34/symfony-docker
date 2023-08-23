@@ -5,9 +5,9 @@ namespace App\Tests\Menu\Impl;
 use App\Menu\Impl\DessertDecoratorImpl;
 use App\Menu\Impl\MainCourseImpl;
 use App\Menu\Impl\StarterDecoratorImpl;
-use App\Menu\MenuParts\Glace;
-use App\Menu\MenuParts\Pizza;
-use App\Menu\MenuParts\Salade;
+use App\Menu\Items\Glace;
+use App\Menu\Items\Pizza;
+use App\Menu\Items\Salade;
 use PHPUnit\Framework\TestCase;
 
 class MainCourseImplTest extends TestCase
